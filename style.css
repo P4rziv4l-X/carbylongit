@@ -115,7 +115,10 @@ body {
     align-items: center;
     height: auto;
     margin: 0;
-    background-color: #f0f0f0;
+    background-image: url('/img/gggg.jpeg'); /* เปลี่ยนเป็นพาธของภาพที่ต้องการ */
+    background-size: cover; /* ปรับขนาดภาพให้เต็มหน้าจอ */
+    background-position: center; /* จัดตำแหน่งภาพให้อยู่ตรงกลาง */
+    background-attachment: fixed;
 }
 
 /* กล่องหลัก */
@@ -132,10 +135,10 @@ body {
 .sub-box {
     width: 336px;
     height: 500px;
-    border: 1px solid #000;
+    /* border: 2px solid #000; */
     padding: 10px;
     box-sizing: border-box;
-    background-color: #fff;
+    background: linear-gradient(to bottom, #999, #555);
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -152,6 +155,7 @@ body {
     width: 100%;
     height: 252px;
     background-color: #ccc; /* สีพื้นหลังของรูป */
+    border: #000 solid 1px;
     margin-bottom: 10px;
     overflow: hidden;
     border-radius: 15px;
@@ -172,11 +176,11 @@ body {
 .text-box {
     width: 100%;
     height: auto;
-    background-color: #f9f9f9;
+    background: linear-gradient(to bottom, white, #999);
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #000000;
+    border-radius: 15px;
     font-family: Arial, sans-serif;
 }
 
@@ -192,15 +196,16 @@ body {
 .detailcar {
     width: 100%;
     height: 100px;
-    background-color: #f9f9f9;
+    background: linear-gradient(45deg, #747474, #ffffff);
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 15px;
     font-family: Arial, sans-serif;
     margin-top: 20px;
+    border: #000 solid 1px;
     p {
         margin-top: 0;
+        color: rgb(0, 0, 0);
     }
 }
 
@@ -209,7 +214,7 @@ body {
     height: 40px;
     background-color: #f9f9f9;
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    border: 2px solid #000000;
     border-radius: 12px;
     font-family: Arial, sans-serif;
     position: absolute; /* ใช้ position absolute เพื่อให้อยู่ที่มุม */
@@ -220,6 +225,10 @@ body {
     display: flex; /* ใช้ flexbox */
     justify-content: center; /* จัดข้อความในแนวนอนให้ตรงกลาง */
     align-items: center; /* จัดข้อความในแนวตั้งให้ตรงกลาง */
+    a {
+        text-decoration: none;
+        color: rgb(7, 81, 7);
+    }
 }
 
 .buttonmore:hover {

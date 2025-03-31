@@ -148,7 +148,7 @@ footer a:hover {
         align-items: center;
         height: auto;
         margin: 0;
-        background-color: #f0f0f0;
+        background: linear-gradient(45deg, #444,#777, white);
     }
     
     /* กล่องหลัก */
@@ -246,6 +246,7 @@ footer a:hover {
         border-radius: 4px;
         font-family: Arial, sans-serif;
         margin-top: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
     
     .text-box p {
@@ -264,9 +265,10 @@ footer a:hover {
         padding: 10px;
         box-sizing: border-box;
         border: 1px solid #ddd;
-        border-radius: 4px;
+        border-radius: 12px;
         font-family: Arial, sans-serif;
         margin-top: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         p {
             margin-top: 0;
         }
@@ -275,13 +277,15 @@ footer a:hover {
     .call div {
         background-color: #ffffff;
         text-align: center;
-        width: 200px;  /* ขนาดที่ fix */
-        height: 100px;  /* ขนาดที่ fix (สามารถปรับตามต้องการ) */
+        width: 120px;  /* ขนาดที่ fix */
+        height: 50px;  /* ขนาดที่ fix (สามารถปรับตามต้องการ) */
         margin-top: 10px;
         color: rgb(0, 0, 0);  /* เพิ่มสีตัวอักษร */  /* เพิ่มช่องว่างภายใน */
         box-sizing: border-box; /* ให้การคำนวณขนาดรวม padding */
         border: #333 solid 1px;
         border-radius:20px ;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        font-size: 10px;
     
     }
     .call {
@@ -292,4 +296,40 @@ footer a:hover {
         gap: 5px;  /* เพิ่มระยะห่างระหว่างกล่อง */
         margin-right: 1px;
         margin-left: 1px;
+    }
+
+    .table-container {
+        font-size: 10px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: auto;
+    }
+
+    .table-container table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .table-container td {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        color: #666;
+    }
+
+    .table-container td:first-child {
+        font-weight: bold;
+        color: #999;
+        width: 40%;
+    }
+
+    .table-container td:last-child {
+        text-align: right;
+        font-weight: bold;
+        color: #222;
+    }
+
+    .table-container tr:last-child td {
+        border-bottom: none;
     }
