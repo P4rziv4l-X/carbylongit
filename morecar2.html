@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="morecar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" type="image/png" href="/img/logo.png">
+
     <script>    
         function toggleMenu() {
             var nav = document.getElementById("nav-links");
             nav.classList.toggle("active");
         }
+
+        let index = 0;
+        function moveSlide(step) {
+            const slides = document.querySelectorAll(".slide");
+            index = (index + step + slides.length) % slides.length;
+            document.querySelector(".slider").style.transform = `translateX(-${index * 100}%)`;
+    }
     </script>
 </head>
 <body>
-    <!-- navbarstart -->
     <nav class="navbar">
         <div class="logo-container">
             <div class="logo-box"><img src="/img/logo.png" alt="" style="width: 80px;"></div>
-            <div class="logo-text">รถบ้านใช้งานลุงอ้น</div>
+            <div class="logo-text">รถบ้านใช้งา By ลุงอ้น</div>
         </div>
         <div class="nav-container">
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
@@ -31,47 +38,41 @@
             </ul>
         </div>
     </nav>
-    <!-- end navbar -->
 
-    <div class="main">
-        <div class="main-box">
-
-            <!-- คันที่1 -->
-            <div class="sub-box">
-                <div class="image-box">
-                    <!-- ใส่รูปภาพที่นี่ -->
-                    <img src="/imgcar1/1.jpg" alt="Image" class="image" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="text-box">
-                    <!-- ใส่ข้อความที่นี่ -->
-                    <p>Honda civic 1996</p>
-                </div>
-                <div class="detailcar">
-                    <p>คันนี้เทสระบบ</p>
-                </div>
-                <div class="buttonmore">
-                    <a href="morecar1.html" class="moredetailcar">เพิ่มเติม</a>
-                </div>
-            </div>
-
-            <!-- คันที่2 -->
-            <div class="sub-box">
-                <div class="image-box">
-                    <!-- ใส่รูปภาพที่นี่ -->
-                    <img src="/imgcar2/2.jpg" alt="Image" class="image" style="width: 100%; height: 100%; object-fit: cover;">
+    <div class="box-main">
+        <div class="box-main-car">
+            <div class="box-main-car-more">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide"><img src="/imgcar2/2.jpg" alt="Car 1"></div>
+                        <div class="slide"><img src="" alt="Car 2"></div>
+                        <div class="slide"><img src="" alt="Car 3"></div>
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
                 </div>
                 <div class="text-box">
                     <!-- ใส่ข้อความที่นี่ -->
                     <p>Honda วิตตามิน c vic</p>
                 </div>
-                <div class="detailcar">
-                    <p>กินแล้วตายคายแล้วรอด</p>
-                </div>
-                <div class="buttonmore">
-                    <a href="morecar2.html" class="moredetailcar">เพิ่มเติม</a>
-                </div>
+                <div class="detailcar" style="white-space: pre-line;">
+                    <p>ไปซื้อกับป้ามึง</p>
+                </div> 
+                <div class="call">
+                    <div>
+                        <p>สนใจติดต่อ Facebook</p>
+                        <a href="https://www.facebook.com/share/1ESszguQhF/" target="_blank" class="fab fa-facebook" style="text-decoration: none;"> เชาวฤทธิ์ เกลี้ยงเกตุ </a>
+                    </div>
+                    <div>
+                        <p>สนใจติดต่อ Line</p>
+                        <a href="#" class="fab fa-line" style="text-decoration: none; color: rgb(125, 195, 21);"> 000-0000-000 </a>
+                    </div>
+                    <div>
+                        <p class="">สนใจติดต่อ เบอร์</p>
+                        <a href="tel:+66806945465" class="fas fa-phone-alt" style="text-decoration: none; color: rgb(190, 32, 32);">080-694-5465</a>
+                    </div>
+                </div>   
             </div>
-    
         </div>
     </div>
 
@@ -86,4 +87,3 @@
 
 </body>
 </html>
-
