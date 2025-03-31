@@ -1,0 +1,260 @@
+@keyframes waveEffect {
+    0% { background-position: 100%; }
+    100% { background-position: -100%; }
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo-box {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+
+}
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffffff, #000000, #ffffff);
+    background-size: 200% 100%;
+    background-clip: text;  /* เพิ่ม property มาตรฐาน */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: waveEffect 2s linear infinite;
+}
+
+.nav-container {
+    position: relative;
+    z-index: 99;
+}
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    transition: max-height 0.5s ease-in-out;
+}
+.nav-links li {
+    margin: 0 10px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background 0.3s, transform 0.3s;
+}
+.nav-links a:hover {
+    background: #555;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+.menu-icon:hover {
+    transform: rotate(90deg);
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        align-items: start;
+    }
+    .nav-links.active {
+        max-height: 300px;
+        opacity: 1;
+        padding: 10px 0;
+    }
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+
+
+/* กำหนดสไตล์สำหรับกล่องหลัก */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* กล่องหลัก */
+.main-box {
+    display: flex;
+    flex-wrap: wrap; /* อนุญาตให้กล่องย่อยจัดเรียงใหม่เมื่อมีหลายกล่อง */
+    justify-content: center; /* จัดกล่องย่อยให้อยู่ตรงกลาง */
+    gap: 20px; /* ระยะห่างระหว่างกล่อง */
+    height: auto;
+    padding: 50px;
+}
+
+/* กำหนดสไตล์สำหรับกล่องย่อย */
+.sub-box {
+    width: 336px;
+    height: 500px;
+    border: 1px solid #000;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+}
+
+.sub-box:hover {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2), 0px 6px 12px rgba(0, 0, 0, 0.1); /* เงาหลายเลเยอร์ที่ใหญ่ขึ้น */
+}
+
+/* กำหนดสไตล์สำหรับรูปภาพในกล่องย่อย */
+.image-box {
+    width: 100%;
+    height: 252px;
+    background-color: #ccc; /* สีพื้นหลังของรูป */
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ทำให้รูปภาพไม่ล้นกรอบ */
+    transition: transform 0.5s ease;
+}
+
+.image:hover {
+    transform: scale(1.1); /* ขยายรูปภาพ 1.2 เท่า */
+}
+
+/* กำหนดสไตล์สำหรับข้อความในกล่องย่อย */
+.text-box {
+    width: 100%;
+    height: auto;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.text-box p {
+    margin: 0;
+    color: #333;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+
+.detailcar {
+    width: 100%;
+    height: 100px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    p {
+        margin-top: 0;
+    }
+}
+
+.buttonmore {
+    width: 120px;
+    height: 40px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+    position: absolute; /* ใช้ position absolute เพื่อให้อยู่ที่มุม */
+    bottom: 10px; /* ระยะห่างจากด้านล่าง */
+    right: 10px; /* ระยะห่างจากด้านขวา */
+    cursor: pointer; /* เพิ่มเคอร์เซอร์ให้ปุ่มดูเหมือนคลิกได้ */
+    text-align: center;
+    display: flex; /* ใช้ flexbox */
+    justify-content: center; /* จัดข้อความในแนวนอนให้ตรงกลาง */
+    align-items: center; /* จัดข้อความในแนวตั้งให้ตรงกลาง */
+}
+
+.buttonmore:hover {
+    background-color: #f0f0f0; /* เมื่อ hover จะเปลี่ยนสี */
+}
+
+
+
+
+/* footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer a {
+        margin: 0 5px;
+    }
+}

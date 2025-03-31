@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <script>    
+        function toggleMenu() {
+            var nav = document.getElementById("nav-links");
+            nav.classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+    <!-- navbarstart -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo-box"><img src="/img/logo.png" alt="" style="width: 80px;"></div>
+            <div class="logo-text">รถบ้านใช้งานลุงอ้น</div>
+        </div>
+        <div class="nav-container">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/index.html" class="fas fa-home"> หน้าหลัก</a></li>
+                <li><a href="https://www.facebook.com/share/1ESszguQhF/" class="fab fa-facebook"> Facebook</a></li>
+                <li><a href="#" class="fab fa-line"> Line</a></li>
+                <li><a href="tel:+66806945465" class="fas fa-phone-alt"> เบอร์โทรติดต่อ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <div class="main">
+        <div class="main-box">
+
+            <div class="sub-box">
+                <div class="image-box">
+                    <!-- ใส่รูปภาพที่นี่ -->
+                    <img src="/imgcar/1.jpg" alt="Image" class="image" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="text-box">
+                    <!-- ใส่ข้อความที่นี่ -->
+                    <p>Honda civic 1996</p>
+                </div>
+                <div class="detailcar">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, nesciunt porro. Hic repellendus </p>
+                </div>
+                <div class="buttonmore">
+                    <a href="morecar1.html" class="moredetailcar">เพิ่มเติม</a>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 เว็บไซต์ของฉัน</p>
+        <p>
+            <a href="#">นโยบายความเป็นส่วนตัว</a> |
+            <a href="#">เงื่อนไขการใช้งาน</a> |
+            <a href="#">ติดต่อเรา</a>
+        </p>
+    </footer>
+
+</body>
+</html>
+

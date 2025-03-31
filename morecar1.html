@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="morecar1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <script>    
+        function toggleMenu() {
+            var nav = document.getElementById("nav-links");
+            nav.classList.toggle("active");
+        }
+
+        let index = 0;
+        function moveSlide(step) {
+            const slides = document.querySelectorAll(".slide");
+            index = (index + step + slides.length) % slides.length;
+            document.querySelector(".slider").style.transform = `translateX(-${index * 100}%)`;
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo-box"><img src="/img/logo.png" alt="" style="width: 80px;"></div>
+            <div class="logo-text">รถบ้านใช้งา By ลุงอ้น</div>
+        </div>
+        <div class="nav-container">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/index.html" class="fas fa-home"> หน้าหลัก</a></li>
+                <li><a href="https://www.facebook.com/share/1ESszguQhF/" class="fab fa-facebook"> Facebook</a></li>
+                <li><a href="#" class="fab fa-line"> Line</a></li>
+                <li><a href="tel:+66806945465" class="fas fa-phone-alt"> เบอร์โทรติดต่อ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="box-main">
+        <div class="box-main-car">
+            <div class="box-main-car-more">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide"><img src="/imgcar/1.jpg" alt="Car 1"></div>
+                        <div class="slide"><img src="/imgcar/1.jpg" alt="Car 2"></div>
+                        <div class="slide"><img src="/imgcar/1.jpg" alt="Car 3"></div>
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+                <div class="text-box">
+                    <!-- ใส่ข้อความที่นี่ -->
+                    <p>Honda civic 1996</p>
+                </div>
+                <div class="detailcar" style="white-space: pre-line;">
+                    <p>🚗 ไมล์เเท้ วิ่งมาเพียง 618 KM เท่านั้น
+                        🚗 Plus Ultra เกียร์ MT
+                        🚗 MODEL ปัจจุบัน
+                        🚗 รับประกันจาก MITSUBISHI 5 ปี 100,000 KM
+                        🚗 ตัวรถออกจากศูนย์วันที่ 28/12/2024 ปลายปีเเท้ (อายุตัวรถน้อยมาก)
+                        🚗 Start Warranty วันที่ 28/12/2024 ปลายปีเเท้
+                        🚗 รถ Display จาก Mitsubishi Motors Thailand เป็นรถใหม่ไม่เคยผ่านการใช้งานครับ
+                        🚗 แถมพรมเข้ารูปทั้งคัน + แม็กไลเนอร์แท้ของ Mitsubishi
+                        🚗 พร้อมสีขาว White Diamond ยอดนิยม รายละเอียดของตัวรถไม่ต่างจากรถใหม่เลยครับ
+                        🚗 ยาง Bridgestone
+                        🚗 ราคารถใหม่ 982,000 บาท ประหยัดไปถึง 353,000 บาท (คิดเป็น 35.95%)
+                        🚗 ราคาดีที่สุดในตลาดปัจจุบัน (เทียบจากรุ่น-ปีและเลขไมล์ใกล้เคียงกัน)
+                        🚗 ดอกเบี้ยพิเศษ 1.29% ตลอดอายุสัญญา (เรทดอกเบี้ยพิเศษเฉพาะภายในเดือนนี้เท่านั้น)
+                        🚗 ไมล์เเท้ วิ่งมาเพียง 618 KM เท่านั้น
+                        🚗 Plus Ultra เกียร์ MT
+                        🚗 MODEL ปัจจุบัน
+                        🚗 รับประกันจาก MITSUBISHI 5 ปี 100,000 KM
+                        🚗 ตัวรถออกจากศูนย์วันที่ 28/12/2024 ปลายปีเเท้ (อายุตัวรถน้อยมาก)
+                        🚗 Start Warranty วันที่ 28/12/2024 ปลายปีเเท้
+                        🚗 รถ Display จาก Mitsubishi Motors Thailand เป็นรถใหม่ไม่เคยผ่านการใช้งานครับ
+                        🚗 แถมพรมเข้ารูปทั้งคัน + แม็กไลเนอร์แท้ของ Mitsubishi
+                        🚗 พร้อมสีขาว White Diamond ยอดนิยม รายละเอียดของตัวรถไม่ต่างจากรถใหม่เลยครับ
+                        🚗 ยาง Bridgestone
+                        🚗 ราคารถใหม่ 982,000 บาท ประหยัดไปถึง 353,000 บาท (คิดเป็น 35.95%)
+                        🚗 ราคาดีที่สุดในตลาดปัจจุบัน (เทียบจากรุ่น-ปีและเลขไมล์ใกล้เคียงกัน)
+                        🚗 ดอกเบี้ยพิเศษ 1.29% ตลอดอายุสัญญา (เรทดอกเบี้ยพิเศษเฉพาะภายในเดือนนี้เท่านั้น) </p>
+                </div> 
+                <div class="call">
+                    <div>
+                        <p>สนใจติดต่อ Facebook</p>
+                        <a href="https://www.facebook.com/share/1ESszguQhF/" target="_blank" class="fab fa-facebook" style="text-decoration: none;"> เชาวฤทธิ์ เกลี้ยงเกตุ </a>
+                    </div>
+                    <div>
+                        <p>สนใจติดต่อ Line</p>
+                        <a href="#" class="fab fa-line" style="text-decoration: none; color: rgb(125, 195, 21);"> 000-0000-000 </a>
+                    </div>
+                    <div>
+                        <p class="">สนใจติดต่อ เบอร์</p>
+                        <a href="tel:+66806945465" class="fas fa-phone-alt" style="text-decoration: none; color: rgb(190, 32, 32);">080-694-5465</a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>รถบ้านใช้งาน by ลุงอ้น</p>
+        <p>
+            <a href="https://www.facebook.com/share/1ESszguQhF/" target="_blank" class="fab fa-facebook" style="text-decoration: none; color: white;"> เชาวฤทธิ์ เกลี้ยงเกตุ </a> |
+            <a href="#" class="fab fa-line" style="text-decoration: none; color: rgb(255, 255, 255);"> 000-0000-000 </a> |
+            <a href="tel:+66806945465" class="fas fa-phone-alt" style="text-decoration: none; color: rgb(255, 255, 255);">080-694-5465</a>
+        </p>
+    </footer>
+
+</body>
+</html>
